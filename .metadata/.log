@@ -1346,3 +1346,9 @@ java.lang.IllegalStateException: Preference node "org.eclipse.jdt.core" has been
 
 !ENTRY org.eclipse.jface.text 2 0 2019-09-07 10:48:55.855
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-09-07 11:59:48.602
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.jface.text 2 0 2019-09-07 12:05:50.273
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
