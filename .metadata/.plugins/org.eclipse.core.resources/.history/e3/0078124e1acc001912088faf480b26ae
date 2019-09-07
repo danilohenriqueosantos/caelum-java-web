@@ -1,0 +1,18 @@
+package br.com.caelum.jdbc.dao;
+
+import br.com.caelum.jdbc.modelo.Contato;
+
+public class InsereConatoTeste {
+	
+	public static void main(String[] args) {
+		
+		
+		Contato contato = new Contato();
+		contato.setNome("Danilo");
+		contato.setEndereco("Av. Fulano de tal, 123);
+		ContatoDAO contatoDAO = new ContatoDAO();
+		contatoDAO.adiciona(contato);
+		
+	}
+
+}

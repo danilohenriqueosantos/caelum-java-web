@@ -1,0 +1,22 @@
+package br.com.caelum.jdbc.dao;
+
+import java.util.Calendar;
+
+import br.com.caelum.jdbc.modelo.Contato;
+
+public class InsereConatoTeste {
+	
+	public static void main(String[] args) {
+		
+		
+		Contato contato = new Contato();
+		contato.setNome("Danilo");
+		contato.setEndereco("Av. Fulano de tal, 123");
+		contato.setEmail("danilo@danilo.com.br");
+		contato.setDataNascimento(Calendar.getInstance());
+		ContatoDAO contatoDAO = new ContatoDAO();
+		contatoDAO.adiciona(contato);
+		
+	}
+
+}
