@@ -67,3 +67,13 @@
 127.0.0.1 - - [07/Sep/2019:15:12:50 -0300] "GET / HTTP/1.1" 200 11444
 0:0:0:0:0:0:0:1 - - [07/Sep/2019:15:12:54 -0300] "GET /fj21-agenda/adiciona-contato.html HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [07/Sep/2019:15:13:02 -0300] "GET /fj21-agenda/adicionaContato?nome=Danilo+Henrique&email=danilo%40danilo.com.br&endereco=rua+fulano+de+tal+123&dataNascimento=10%2F10%2F1987&btnGravar=Gravar HTTP/1.1" 200 71
+127.0.0.1 - - [07/Sep/2019:16:03:02 -0300] "GET / HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:03:15 -0300] "GET /fj21-agenda/adicionaContato HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:03:19 -0300] "GET /fj21-agenda/adicionaContato HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:03:23 -0300] "GET /fj21-agenda/ HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:03:36 -0300] "GET /fj21-agenda/naoexiste.html HTTP/1.1" 404 5
+127.0.0.1 - - [07/Sep/2019:16:04:06 -0300] "GET / HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:04:06 -0300] "GET /fj21-agenda/naoexiste.html HTTP/1.1" 404 140
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:04:24 -0300] "GET /fj21-agenda/adiciona-contato.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:04:32 -0300] "GET /fj21-agenda/adicionaContato?nome=Danilo+Henrique&email=danilo%40danilo.com.br&endereco=rua+fulano+de+tal+123&dataNascimento=10101987&btnGravar=Gravar HTTP/1.1" 200 25
+0:0:0:0:0:0:0:1 - - [07/Sep/2019:16:04:48 -0300] "GET /fj21-agenda/adicionaContato?nome=Danilo+Henrique&email=danilo%40danilo.com.br&endereco=123&dataNascimento=10%2F10%2F1987&btnGravar=Gravar HTTP/1.1" 200 72
