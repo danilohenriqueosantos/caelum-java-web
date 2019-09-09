@@ -13,42 +13,47 @@ import br.com.caelum.agenda.ConnectionFactory;
 import br.com.caelum.agenda.modelo.Contato;
 
 public class ContatoDao {
-	private Connection connection;
+	private Connection conn;
+	private PreparedStatement stmt = null;
+	private ResultSet rs = null;
 
 	public ContatoDao() {
-		this.connection = ConnectionFactory.getConnection();
+		this.conn = ConnectionFactory.getConnection();
+		
 		
 	}
 
 	public ContatoDao(Connection connection) {
-		this.connection = connection;
+		this.conn = connection;
 	}
 
 	public void adiciona(Contato contato) {
 		try {
 			String sql = "insert into contatos (nome, email, endereco, dataNascimento) values (?,?,?,?)";
-			PreparedStatement stmt = connection.prepareStatement(sql);
+			this.stmt = this.conn.prepareStatement(sql);
 
-			stmt.setString(1, contato.getNome());
-			stmt.setString(2, contato.getEmail());
-			stmt.setString(3, contato.getEndereco());
-			stmt.setDate(4, new Date(contato.getDataNascimento().getTimeInMillis()));
+			this.stmt.setString(1, contato.getNome());
+			this.stmt.setString(2, contato.getEmail());
+			this.stmt.setString(3, contato.getEndereco());
+			this.stmt.setDate(4, new Date(contato.getDataNascimento().getTimeInMillis()));
 
-			stmt.execute();
-			stmt.close();
+			this.stmt.execute();
+			this.stmt.close();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
+		} finally {
+			ConnectionFactory.closeConnection(conn, stmt);
 		}
 	}
 
 	public List<Contato> getLista() {
 		try {
 			List<Contato> contatos = new ArrayList<Contato>();
-			PreparedStatement stmt = this.connection.prepareStatement("select * from contatos");
+			this.stmt = this.conn.prepareStatement("select * from contatos");
 
-			ResultSet rs = stmt.executeQuery();
+			this.rs = this.stmt.executeQuery();
 
-			while(rs.next()) {
+			while(this.rs.next()) {
 				Contato contato = new Contato();
 				//popula o objeto contato
 				contato.setId(rs.getLong("id"));
@@ -65,39 +70,45 @@ public class ContatoDao {
 				contatos.add(contato);
 			}
 
-			rs.close();
-			stmt.close();
+			this.rs.close();
+			this.stmt.close();
 
 			return contatos;
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
+		} finally {
+			ConnectionFactory.closeConnection(conn, stmt, rs);
 		}
 	}
 
 	public void exclui(Contato contato) {
 		String sql = "delete from contatos where id=?";
 		try {
-			PreparedStatement stmt = this.connection.prepareStatement(sql);
+			this.stmt = this.conn.prepareStatement(sql);
 			stmt.setLong(1, contato.getId());
 			stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
+		} finally {
+			ConnectionFactory.closeConnection(conn, stmt);
 		}
 	}
 
 	public void atualiza(Contato contato) {
 		String sql = "update contatos set nome = ?, email = ?, endereco = ?, dataNascimento = ? where id = ?";
 		try {
-			PreparedStatement stmt = this.connection.prepareStatement(sql);
-			stmt.setString(1, contato.getNome());
-			stmt.setString(2, contato.getEmail());
-			stmt.setString(3, contato.getEndereco());
-			stmt.setDate(4, new java.sql.Date(contato.getDataNascimento().getTimeInMillis()));
-			stmt.setLong(5, contato.getId());
+			this.stmt = this.conn.prepareStatement(sql);
+			this.stmt.setString(1, contato.getNome());
+			this.stmt.setString(2, contato.getEmail());
+			this.stmt.setString(3, contato.getEndereco());
+			this.stmt.setDate(4, new java.sql.Date(contato.getDataNascimento().getTimeInMillis()));
+			this.stmt.setLong(5, contato.getId());
 
-			stmt.execute();
+			this.stmt.execute();
 		} catch (SQLException e) {
 			throw new RuntimeException(e);
+		} finally {
+			ConnectionFactory.closeConnection(conn, stmt);
 		}
 	}
 }
