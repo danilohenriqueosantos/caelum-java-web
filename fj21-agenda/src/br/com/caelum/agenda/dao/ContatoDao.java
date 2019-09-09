@@ -16,11 +16,8 @@ public class ContatoDao {
 	private Connection connection;
 
 	public ContatoDao() {
-		try {
-			this.connection = new ConnectionFactory().getConnection();
-		} catch (SQLException e) {
-			throw new RuntimeException(e);
-		}
+		this.connection = ConnectionFactory.getConnection();
+		
 	}
 
 	public ContatoDao(Connection connection) {

@@ -39,7 +39,8 @@
 
 		for (Contato contato : contatos) {
 	%>
-	<li><%=contato.getNome()%>, <%=contato.getEmail()%> : <%=contato.getEndereco()%>
+	<li><%=contato.getNome()%>, 
+	<%=contato.getEmail()%> : <%=contato.getEndereco()%>
 	</li>
 	<%
 		}
