@@ -10,9 +10,9 @@ public class ConnectionFactory {
 
 	public static Connection getConnection() {
 		try {
-//			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			return DriverManager.getConnection("jdbc:mysql://localhost:3306/fj21", "root", "Da260716@!");
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			throw new RuntimeException(e);
 		}
 	}
