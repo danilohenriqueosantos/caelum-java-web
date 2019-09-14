@@ -16,7 +16,14 @@
 		<c:forEach var="contato" items="${dao.lista}">
 			<tr>
 				<td>${contato.nome}</td>
-				<td>${contato.email}</td>
+				<td><c:if test="${not empty contato.email}">
+						<a href="mailto:${contato.email}">${contato.email}</a>
+
+					</c:if> 
+					<c:if test="${empty contato.email}">
+						E-mail não informado.
+					</c:if></td>
+
 				<td>${contato.endereco}</td>
 				<td>${contato.formataData()}</td>
 			</tr>
