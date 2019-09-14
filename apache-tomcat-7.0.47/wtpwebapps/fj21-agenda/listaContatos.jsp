@@ -34,7 +34,9 @@
 					<td><fmt:formatDate value="${contato.dataNascimento.time}"
 							pattern="dd/MM/yyyy" /></td>
 				</tr>
-
+				<td>
+					<a href="mvc?logica=RemoveContatoLogic&id=${contato.id}">Remover</a>
+				</td>
 			</c:forEach>
 		</table>
 
