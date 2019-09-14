@@ -33,18 +33,24 @@
 		System.out.println("Tudo foi executado!");
 	%>
 
-	<%
-		ContatoDao dao = new ContatoDao();
-		List<Contato> contatos = dao.getLista();
+	<table>
+		<%
+			ContatoDao dao = new ContatoDao();
+			List<Contato> contatos = dao.getLista();
 
-		for (Contato contato : contatos) {
-	%>
-	<li><%=contato.getNome()%>, 
-	<%=contato.getEmail()%> : <%=contato.getEndereco()%>
-	</li>
-	<%
-		}
-	%>
+			for (Contato contato : contatos) {
+		%>
+		<tr>
+			<td><%=contato.getNome()%></td>
+			<td><%=contato.getEmail()%></td>
+			<td><%=contato.getEndereco()%></td>
+			<td><%=contato.formataData()%></td>
+		</tr>
+		<%
+			}
+		%>
+
+	</table>
 
 </body>
 </html>

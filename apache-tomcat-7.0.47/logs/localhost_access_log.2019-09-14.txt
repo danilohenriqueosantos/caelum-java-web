@@ -1,0 +1,7 @@
+127.0.0.1 - - [14/Sep/2019:09:22:57 -0300] "GET / HTTP/1.1" 200 11444
+127.0.0.1 - - [14/Sep/2019:09:24:47 -0300] "GET /fj21-agenda/listaContato.jsp HTTP/1.1" 200 3731
+127.0.0.1 - - [14/Sep/2019:09:24:47 -0300] "GET /favicon.ico HTTP/1.1" 200 21630
+127.0.0.1 - - [14/Sep/2019:09:36:11 -0300] "GET /fj21-agenda/listaContato.jsp HTTP/1.1" 200 733
+127.0.0.1 - - [14/Sep/2019:09:43:02 -0300] "GET / HTTP/1.1" 200 11444
+127.0.0.1 - - [14/Sep/2019:09:43:09 -0300] "GET /fj21-agenda/digita-idade.jsp HTTP/1.1" 200 253
+127.0.0.1 - - [14/Sep/2019:09:43:12 -0300] "GET /fj21-agenda/mostra-idade.jsp?idade=31 HTTP/1.1" 200 163
