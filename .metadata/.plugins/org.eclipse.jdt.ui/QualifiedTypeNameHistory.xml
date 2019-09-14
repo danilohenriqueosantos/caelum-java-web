@@ -14,6 +14,12 @@
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="br.com.caelum.jdbc.modelo.Contato"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="br.com.caelum.jdbc.dao.ContatoDAO"/>
+    <fullyQualifiedTypeName name="javax.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="br.com.caelum.agenda.modelo.Contato"/>
+    <fullyQualifiedTypeName name="br.com.caelum.agenda.dao.ContatoDao"/>
 </qualifiedTypeNameHistroy>
