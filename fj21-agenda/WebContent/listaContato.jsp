@@ -45,7 +45,7 @@
 			<td><%=contato.getNome()%></td>
 			<td><%=contato.getEmail()%></td>
 			<td><%=contato.getEndereco()%></td>
-			<td><%=contato.formataData()%></td>
+			<td><%=contato.getDataNascimento()%></td>
 		</tr>
 		<%
 			}

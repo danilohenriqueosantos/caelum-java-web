@@ -41,7 +41,7 @@ public class AdicionaContatoServlet extends HttpServlet {
 			dataNascimento = Calendar.getInstance();
 			dataNascimento.setTime(date);
 		} catch (Exception e) {
-			out.print("Erro na conversção da data");
+			out.print("Erro na convers�o da data");
 			return;
 		}
 
