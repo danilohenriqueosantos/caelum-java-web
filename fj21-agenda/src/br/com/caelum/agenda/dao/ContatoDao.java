@@ -18,9 +18,7 @@ public class ContatoDao {
 	private ResultSet rs = null;
 
 	public ContatoDao() {
-		this.conn = ConnectionFactory.getConnection();
-		
-		
+		this.conn = ConnectionFactory.getConnection();	
 	}
 
 	public ContatoDao(Connection connection) {
