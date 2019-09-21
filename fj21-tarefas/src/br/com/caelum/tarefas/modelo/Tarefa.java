@@ -2,9 +2,14 @@ package br.com.caelum.tarefas.modelo;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.Size;
+
 public class Tarefa {
 	private Long id;
+	
+	@Size(min=5, message = "Descrição deve ter pelo menos 5 caracteres")
 	private String descricao;
+	
 	private boolean finalizado;
 	private Calendar dataFinalizacao;
 
@@ -15,7 +20,7 @@ public class Tarefa {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	
 	public String getDescricao() {
 		return descricao;
 	}

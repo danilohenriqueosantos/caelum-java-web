@@ -13,7 +13,7 @@
 <body>
 
 	<figure class="figure">
-		<img src="/WebContent/WEB-INF/views/imagens/caelum.pn" class="figure-img img-fluid rounded"
+		<img src="imagens/caelum.png" class="figure-img img-fluid rounded"
 			alt="logo da empresa">
 		<figcaption class="Logotipo da Empresa">Ensino e inovação</figcaption>
 	</figure>
