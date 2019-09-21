@@ -5,6 +5,7 @@ import java.util.Calendar;
 import javax.validation.constraints.Size;
 
 public class Tarefa {
+	
 	private Long id;
 	
 	@Size(min=5, message = "Descrição deve ter pelo menos 5 caracteres")
@@ -12,14 +13,6 @@ public class Tarefa {
 	
 	private boolean finalizado;
 	private Calendar dataFinalizacao;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
 	
 	public String getDescricao() {
 		return descricao;
@@ -43,6 +36,14 @@ public class Tarefa {
 
 	public void setDataFinalizacao(Calendar dataFinalizacao) {
 		this.dataFinalizacao = dataFinalizacao;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 }
