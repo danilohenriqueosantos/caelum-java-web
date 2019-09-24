@@ -1,6 +1,0 @@
-127.0.0.1 - - [10/Sep/2019:14:33:36 -0300] "GET / HTTP/1.1" 200 11444
-10.10.0.139 - - [10/Sep/2019:14:35:05 -0300] "GET /fj21-agenda/adiciona-contato.html HTTP/1.1" 200 642
-10.10.0.139 - - [10/Sep/2019:14:35:05 -0300] "GET /favicon.ico HTTP/1.1" 200 21630
-10.10.0.139 - - [10/Sep/2019:14:35:41 -0300] "GET /fj21-agenda/adicionaContato?nome=Maria+do+Socorro+Oliveira+&email=corrinha%40corrinha.com.br&endereco=rua+fulano+de+tal%2C+183&dataNascimento=18%2F05%2F1967&btnGravar=Gravar HTTP/1.1" 500 129
-127.0.0.1 - - [10/Sep/2019:14:36:27 -0300] "GET / HTTP/1.1" 200 11444
-10.10.0.139 - - [10/Sep/2019:14:37:09 -0300] "GET /fj21-agenda/adicionaContato?nome=Maria+do+Socorro+Oliveira&email=corrinha%40corrinha.com.br&endereco=rua+fulano+de+tal%2C+183&dataNascimento=18%2F05%2F1967&btnGravar=Gravar HTTP/1.1" 200 82
