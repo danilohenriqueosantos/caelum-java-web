@@ -53,3 +53,13 @@
 0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:45:36 -0300] "GET /favicon.ico HTTP/1.1" 200 21630
 0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:45:46 -0300] "GET /uber-controle/produtos/form HTTP/1.1" 200 519
 0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:46:16 -0300] "POST /uber-controle/produtos HTTP/1.1" 404 1070
+127.0.0.1 - - [24/Sep/2019:12:52:05 -0300] "GET / HTTP/1.1" 200 11369
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:52:18 -0300] "GET /uber-controle/produtos/form HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:52:22 -0300] "POST /uber-controle/produtos HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:53:38 -0300] "GET /uber-controle/produtos/form HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:53:55 -0300] "POST /uber-controle/produtos HTTP/1.1" 200 168
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:56:37 -0300] "GET /uber-controle/produtos/form HTTP/1.1" 200 519
+0:0:0:0:0:0:0:1 - - [24/Sep/2019:12:56:42 -0300] "POST /uber-controle/produtos HTTP/1.1" 200 168
+127.0.0.1 - - [24/Sep/2019:13:11:20 -0300] "GET / HTTP/1.1" 200 11369
+127.0.0.1 - - [24/Sep/2019:13:12:55 -0300] "GET / HTTP/1.1" 200 11369
+127.0.0.1 - - [24/Sep/2019:14:31:34 -0300] "GET / HTTP/1.1" 200 11369

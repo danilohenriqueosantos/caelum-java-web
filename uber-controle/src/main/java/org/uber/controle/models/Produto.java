@@ -1,13 +1,20 @@
 package org.uber.controle.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Produto {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String titulo;
 	private String descricao;
 	private int paginas;
 
-	
-	
 	public Produto(String titulo, String descricao, int paginas) {
 		this.titulo = titulo;
 		this.descricao = descricao;
