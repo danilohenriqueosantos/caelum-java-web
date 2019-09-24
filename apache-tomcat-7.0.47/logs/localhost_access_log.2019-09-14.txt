@@ -229,3 +229,10 @@
 0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:37:42 -0300] "GET /fj21-agenda/listaContatos.jsp HTTP/1.1" 200 4343
 0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:37:48 -0300] "GET /fj21-agenda/mvc?logica=RemoveContatoLogic&id=17 HTTP/1.1" 200 4062
 0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:37:52 -0300] "GET /fj21-agenda/mvc?logica=RemoveContatoLogic&id=16 HTTP/1.1" 200 3785
+127.0.0.1 - - [14/Sep/2019:16:56:00 -0300] "GET / HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:56:33 -0300] "GET /fj21-agenda/mvc?listaContatos.jsp HTTP/1.1" 500 120
+127.0.0.1 - - [14/Sep/2019:16:57:17 -0300] "GET / HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:57:22 -0300] "GET /fj21-agenda/listaContatos.jsp HTTP/1.1" 200 3785
+0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:57:30 -0300] "GET /fj21-agenda/mvc?logica=RemoveContatoLogic&id=15 HTTP/1.1" 200 3507
+0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:57:59 -0300] "GET /fj21-agenda/listaContatos.jsp HTTP/1.1" 200 3507
+0:0:0:0:0:0:0:1 - - [14/Sep/2019:16:58:14 -0300] "GET /fj21-agenda/mvc?logica=RemoveContatoLogic&id=13 HTTP/1.1" 200 3215

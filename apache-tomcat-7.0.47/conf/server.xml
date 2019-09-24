@@ -124,7 +124,11 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
+<<<<<<< HEAD
       <Context docBase="E:\java-developer\apache-tomcat-7.0.47\wtpwebapps\fj21-agenda" path="/fj21-agenda" reloadable="true" source="org.eclipse.jst.jee.server:fj21-agenda"/><Context docBase="E:\java-developer\apache-tomcat-7.0.47\wtpwebapps\mecanica" path="/mecanica" reloadable="true" source="org.eclipse.jst.jee.server:mecanica"/></Host>
+=======
+      <Context docBase="/home/web8454/eclipse-workspace/apache-tomcat-7.0.47/wtpwebapps/fj21-agenda" path="/fj21-agenda" reloadable="true" source="org.eclipse.jst.jee.server:fj21-agenda"/><Context docBase="/home/web8454/eclipse-workspace/apache-tomcat-7.0.47/wtpwebapps/fj21-tarefas" path="/fj21-tarefas" reloadable="true" source="org.eclipse.jst.jee.server:fj21-tarefas"/></Host>
+>>>>>>> fefce0ac28401de2d87518a0e55b36223d36e5b8
     </Engine>
   </Service>
 </Server>
