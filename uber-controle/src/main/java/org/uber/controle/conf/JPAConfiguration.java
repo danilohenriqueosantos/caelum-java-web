@@ -2,12 +2,18 @@ package org.uber.controle.conf;
 
 import java.util.Properties;
 
+import javax.persistence.EntityManagerFactory;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+
+@EnableTransactionManagement
 public class JPAConfiguration {
 	
 	@Bean
@@ -20,7 +26,7 @@ public class JPAConfiguration {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setUsername("root");
 		dataSource.setPassword("");
-		dataSource.setUrl("jdbc:mysql://locahost:3306/casadocodigo");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/casadocodigo");
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
 		
 		factoryBean.setDataSource(dataSource);
@@ -28,6 +34,7 @@ public class JPAConfiguration {
 		Properties props = new Properties();
 		props.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQL5Dialect");
 		props.setProperty("hibernate.show_sql", "true");
+		props.setProperty("hibernate.format_sql", "true");
 		props.setProperty("hibernate.hbm2ddl.auto", "update");
 		
 		factoryBean.setJpaProperties(props);
@@ -35,6 +42,11 @@ public class JPAConfiguration {
 		factoryBean.setPackagesToScan("org.uber.controle.models");
 		
 		return factoryBean;
+	}
+	
+	@Bean
+	public JpaTransactionManager transactionManager(EntityManagerFactory emf) {
+		return new JpaTransactionManager(emf);
 	}
 
 }
