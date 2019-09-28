@@ -13,10 +13,11 @@ public class GeraTabelas {
 	
 	public static void main(String[] args) {
 		
-//		Tarefa tarefa = new Tarefa();
-//		tarefa.setDescricao("Estudar JPA");
-//		tarefa.setFinalizado(true);
-//		tarefa.setDataFinalizacao(Calendar.getInstance());
+		Tarefa tarefa = new Tarefa();
+		tarefa.setId(1L);
+		tarefa.setDescricao("Estudar Hibernate");
+		tarefa.setFinalizado(false);
+		tarefa.setDataFinalizacao(Calendar.getInstance());
 //		
 //		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
 //		EntityManager manager = factory.createEntityManager();
@@ -31,11 +32,19 @@ public class GeraTabelas {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("tarefas");
 		EntityManager manager = factory.createEntityManager();
 		
-		Tarefa tarefaEncontrada = manager.find(Tarefa.class, 1L);
-		System.out.println(tarefaEncontrada.getDescricao());
+//		Tarefa tarefaEncontrada = manager.find(Tarefa.class, 2L);
+		
+		manager.getTransaction().begin();
+//		manager.remove(tarefaEncontrada);
+		manager.merge(tarefa);
+		manager.getTransaction().commit();
 		
 		manager.close();
 		factory.close();
+		
+		
+		
+		
 		
 	}
 }
