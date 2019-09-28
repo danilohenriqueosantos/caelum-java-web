@@ -2536,3 +2536,6 @@ java.io.FileNotFoundException: /home/web8454/eclipse-workspace/apache-tomcat-7.0
 
 !ENTRY org.eclipse.jface.text 2 0 2019-09-28 09:47:33.387
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.boolean'
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2019-09-28 10:58:08.699
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4

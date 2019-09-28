@@ -1,0 +1,5 @@
+127.0.0.1 - - [28/Sep/2019:11:06:45 -0300] "GET / HTTP/1.1" 200 11444
+0:0:0:0:0:0:0:1 - - [28/Sep/2019:11:07:17 -0300] "GET /fj21-tarefas/listaTarefas HTTP/1.1" 200 2423
+0:0:0:0:0:0:0:1 - - [28/Sep/2019:11:07:17 -0300] "GET /fj21-tarefas/resources/js/jquery.js HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [28/Sep/2019:11:07:19 -0300] "GET /fj21-tarefas/loginForm HTTP/1.1" 200 365
+0:0:0:0:0:0:0:1 - - [28/Sep/2019:11:07:30 -0300] "POST /fj21-tarefas/efetuaLogin HTTP/1.1" 200 275
