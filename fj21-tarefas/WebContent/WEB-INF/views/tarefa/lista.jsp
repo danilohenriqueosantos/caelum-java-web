@@ -12,7 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<c:import url="../cabecalho.jsp" />
 <script type="text/javascript">
 function finalizaAgora(id) {
 	$.post("finalizaTarefa", {'id': id}, function () {
@@ -25,12 +25,14 @@ function finalizaAgora(id) {
 
 <a href="novaTarefa">Criar nova tarefa</a>
 
-<table>
+<table class="table table-striped">
 	<tr>
-		<td>Id</td>
-		<td>Descrição</td>
-		<td>Finalizado</td>
-		<td>Data de finalização</td>
+		<td scope="col">Id</td>
+		<td scope="col">Descrição</td>
+		<td scope="col">Finalizado</td>
+		<td scope="col">Data de finalização</td>
+		<td scope="col">Alterar</td>
+		<td scope="col">Remover</td>
 	</tr>
 	
 	<c:forEach var="tarefa" items="${tarefas}">
@@ -39,14 +41,14 @@ function finalizaAgora(id) {
 			<td>${tarefa.descricao}</td>
 			<c:if test="${tarefa.finalizado eq false}">
 				<td id="tarefa_${tarefa.id}">
-				<a href="#" onclick="finalizaAgora(${tarefa.id})">Finaliza agora!</a></td>
+				<a class="btn btn-success" href="#" onclick="finalizaAgora(${tarefa.id})">Finalizar agora!</a></td>
 			</c:if>
 			<c:if test="${tarefa.finalizado eq true}">
 				<td>Finalizado</td>
 			</c:if>
 			<td><fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy"/></td>
-			<td><a href="removeTarefa?id=${tarefa.id}">Remover</a></td>
-			<td><a href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>
+			<td><a class="btn btn-warning" href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>
+			<td><a class="btn btn-danger" href="removeTarefa?id=${tarefa.id}">Remover</a></td>
 		</tr>
 	</c:forEach>
 </table>
