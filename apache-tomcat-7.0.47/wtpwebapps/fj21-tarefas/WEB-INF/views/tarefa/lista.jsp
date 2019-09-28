@@ -23,7 +23,9 @@ function finalizaAgora(id) {
 	});
 }</script>
 
-<a href="novaTarefa">Criar nova tarefa</a>
+<div class="form-group">
+	<a class="btn btn-primary" href="novaTarefa">Criar nova tarefa</a>
+</div>
 
 <table class="table table-striped">
 	<tr>
@@ -44,7 +46,7 @@ function finalizaAgora(id) {
 				<a class="btn btn-success" href="#" onclick="finalizaAgora(${tarefa.id})">Finalizar agora!</a></td>
 			</c:if>
 			<c:if test="${tarefa.finalizado eq true}">
-				<td>Finalizado</td>
+				<td class="btn btn-primary">Finalizado</td>
 			</c:if>
 			<td><fmt:formatDate value="${tarefa.dataFinalizacao.time}" pattern="dd/MM/yyyy"/></td>
 			<td><a class="btn btn-warning" href="mostraTarefa?id=${tarefa.id}">Alterar</a></td>

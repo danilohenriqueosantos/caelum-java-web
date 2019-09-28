@@ -12,7 +12,14 @@
 	<c:import url="cabecalho.jsp" />
 	<h2>Páginas inicial da Lista de Tarefas</h2>
 	<p>Bem vindo, ${usuarioLogado.login}</p>
-	<a href="listaTarefas">Clique aqui</a> para acessar a lista de tarefas
-	<a href="logout">Sair do sistema</a>
+	<div class="container">
+		<div class="form-group">
+			<a class="btn btn-primary btn-lg btn-block" href="listaTarefas">Clique aqui para acessar a lista de tarefas</a> 
+		</div>
+		<div class="form-group">
+			<a class="btn btn-danger btn-lg btn-block" href="logout">Sair do sistema</a>
+		</div>
+
+	</div>
 </body>
 </html>

@@ -13,16 +13,23 @@
 
 <c:import url="../cabecalho.jsp" />
 
+<div class="container">
 	<h3>Adiciona Tarefa</h3>
 	
 	<form action="adicionaTarefa" method="post">
-		<form:errors path="tarefa.descricao" cssStyle="color:red" /> <br>
-		Descrição <br>
-		<textarea name="descricao" rows="5" cols="100" ></textarea>
-		
-		<input type="submit" value="Adicionar"> 
+		<form:errors path="tarefa.descricao" cssStyle="color:red" /> 
+		<div class="form-group">
+			<label for="descricao">Descrição</label>
+			<textarea class="form-control" id="descricao" name="descricao" rows="5" cols="100" ></textarea>
+		</div>
+		 
+		<div class="form-group">
+			<input class="btn btn-primary" type="submit" value="Adicionar"> 
+		</div>
 	</form>
 	
+
+</div>
 <c:import url="../rodape.jsp" />
 </body>
 </html>
